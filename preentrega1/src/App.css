@@ -22,8 +22,13 @@ div img{
 
 }
 
+.titulo{
+  text-decoration: none;
+  color: black;
+}
 
-.botones button{
+.botones .button{
+  text-decoration: none;
   margin: 5px;
   padding: 5px;
   height: 40px;
@@ -31,12 +36,126 @@ div img{
   background-color: white;
 }
 
-.botones button:hover{
+.botones .button:hover{
   background-color: black;
   color: white;
 }
 
-.ItemListContainer{
+.greeting{
+  display: flex;
+  justify-content: center;
+}
+
+.ItemList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(182, 121, 240);
+}
+
+.Item{
+  border:solid black 2px;
+  background-color: white;
+  height: 400px;
+  width:300px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.ItemNombre{
+  display: flex;
+  justify-content: center;
+}
+
+.ItemFooter{
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  padding: 5px;
+}
+
+
+.botonDetalle{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  margin: 5px;
+  padding: 5px;
+  height: 40px;
+  width: 80px;
+  background-color: rgb(182, 121, 240);
+}
+
+.botonDetalle:hover{
+  background-color: black;
+  color: white;
+}
+
+.ItemDetail{
+  border:solid black 2px;
+  background-color: white;
+  height: 400px;
+  width:300px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.DetailNombre{
+  display: flex;
+  justify-content: center;
+}
+
+.controles{
+  display: flex;
+  justify-content: space-around;
+}
+
+.botonContador{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  margin: 5px;
+  padding: 5px;
+  height: 30px;
+  width: 30px;
+  background-color: rgb(182, 121, 240);
+}
+
+.botonContador:hover{
+  background-color: black;
+  color: white;
+}
+
+.numeroContador{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+.botonAgregar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  margin: 5px;
+  padding: 5px;
+  height: 40px;
+  width: 130px;
+  background-color: rgb(182, 121, 240);
+}
+
+.botonAgregar:hover{
+  background-color: black;
+  color: white;
+}
+
+.contenedorBotonAgregar{
   display: flex;
   justify-content: center;
 }
