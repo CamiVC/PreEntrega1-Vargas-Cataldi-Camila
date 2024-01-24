@@ -16,7 +16,7 @@ function App() {
         <NavBar/>
         <Routes>
           <Route path="/" element={<ItemListContainer greeting={"Bienvenidos a Cami Cosmetics"}/>}/>
-          <Route path="/categoria/:categoriaId" element={<ItemDetailContainer/>}/>
+          <Route path="/categoria/:categoria" element={<ItemListContainer/>}/>
           <Route path="/item/:itemId" element={<ItemDetailContainer/>}/>
         </Routes>
       </BrowserRouter>
