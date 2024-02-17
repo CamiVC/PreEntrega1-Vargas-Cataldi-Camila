@@ -9,7 +9,7 @@ return (
         <div className='botones'>
         <NavLink to={`/categoria/labial`} className="button">Labial</NavLink>
         <NavLink to={`/categoria/base`} className="button">Base</NavLink>
-        <NavLink to={`/categoria/delineador`} className="button">Delineador</NavLink>
+        <NavLink to={`/categoria/sombra`} className="button">Sombra</NavLink>
         </div>
         <Link to={"/"} className='titulo'>
             <h1>CAMI COSMETICS</h1>

@@ -159,3 +159,81 @@ div img{
   display: flex;
   justify-content: center;
 }
+
+.cartItem1{
+  margin: 10px;
+  border: solid black 1px;
+  background-color: rgba(182, 121, 240, 0.493);
+  
+}
+
+.cartItem{
+  display: flex;
+  justify-content: space-around;
+  margin: 4px
+}
+
+.botonBorrar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  margin: 5px;
+  padding: 5px;
+  height: 40px;
+  width: 130px;
+  background-color: rgb(182, 121, 240);
+}
+
+
+.formCheckout{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.finalizarBoton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  margin: 5px;
+  padding: 5px;
+  height: 40px;
+  width: 130px;
+  background-color: rgb(182, 121, 240);
+}
+
+.finalizarBoton:hover{
+  background-color: black;
+  color: white;
+}
+
+
+.parCheckout{
+  margin: 3px;
+}
+
+.labelForm{
+  margin: 10px;
+  font-size: 20px;
+}
+
+.botonCheckout{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  margin: 5px;
+  padding: 5px;
+  height: 40px;
+  width: 80px;
+  background-color: rgb(182, 121, 240);
+}
+
+.botonCheckout:hover{
+  background-color: black;
+  color: white;
+}
