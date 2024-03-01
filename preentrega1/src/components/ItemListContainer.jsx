@@ -1,36 +1,46 @@
 import React, { useEffect, useState } from 'react'
-import { getProducts } from './Productos'
+
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
 
-const ItemListContainer = ({greeting}) => {
+import { getDocs, collection, query, where, QueryStartAtConstraint } from 'firebase/firestore'
+import db from '../db/db'
 
-    const [products, setProducts] = useState([])
+const ItemListContainer = ({greeting}) => {
+    const [productos, setProductos] =useState([])
+    const [loading, setLoading] =useState(true)
 
     const categoria = useParams().categoria
 
     useEffect(()=>{
-        getProducts()
-        .then(response=>{
-            if (categoria) {
-                setProducts(response.filter((products) => products.categoria === categoria))
-            } else {
-                setProducts(response)
-            }
-            
+        setLoading(true)
+
+        const collectionRef = categoria
+        ? query (collection(db, "Productos"),where("categoria", "==" ,  categoria))
+        : collection(db,"Productos")
+
+        getDocs(collectionRef)
+        .then(response=> {
+            const productosAdapted = response.docs.map(doc => {
+                const data=doc.data()
+                return { id: doc.id, ...data}
+            })
+            setProductos(productosAdapted)
         })
-        .catch(error=>{
+        .catch(error=> {
             console.log(error)
         })
-    }, [categoria])
-
-
-
+        .finally(()=>{
+            setLoading(false)
+        })
+    })
 
     return (
-        <div className='ItemListContainer'>
-            <h2 className='greeting'>{greeting}</h2>
-            <ItemList products={products}/>
+        <div>
+            <h2>{greeting}</h2>
+            <div >
+                <ItemList products={productos}/>
+            </div>
         </div>
     )
 }
